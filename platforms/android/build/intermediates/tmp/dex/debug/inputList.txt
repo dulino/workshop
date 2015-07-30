@@ -1,2 +1,2 @@
-C:\Users\User\Box Sync\Projetos\cordova\workshop\platforms\android\build\intermediates\classes\debug
-C:\Users\User\Box Sync\Projetos\cordova\workshop\platforms\android\build\intermediates\pre-dexed\debug\classes-2f6ad9269e9085d285dfd715348f916534ec3564.jar
+C:\Projetos\Cordova\workshop\platforms\android\build\intermediates\classes\debug
+C:\Projetos\Cordova\workshop\platforms\android\build\intermediates\pre-dexed\debug\classes-e83386aeda5ff09cad82034b7ffa2ed39d512f4f.jar

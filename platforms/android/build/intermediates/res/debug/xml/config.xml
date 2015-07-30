@@ -32,4 +32,4 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
 </widget>
-<!-- From: file:/C:/Users/User/Box%20Sync/Projetos/cordova/workshop/platforms/android/res/xml/config.xml -->
+<!-- From: file:/C:/Projetos/Cordova/workshop/platforms/android/res/xml/config.xml -->

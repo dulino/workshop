@@ -11,12 +11,14 @@
 	    <header class="bar bar-nav">
 	        <h1 class="title">POA Poker Mobile</h1>
 	    </header>
-	    <div class="bar bar-standard bar-header-secondary">
+<!--
+        <div class="pesquisa bar bar-standard bar-header-secondary">
 	        <input class='search-key' type="search" placeholder="Pesquisar pelo nome..."/>
 	    </div>
-	    <div class="content"></div>
+-->
+
 <nav class="bar bar-tab">
-  <a class="tab-item active" href="#">
+  <a class="tab-ranking tab-item active" href="#">
     <span class="icon icon-list"></span>
     <span class="tab-label">Ranking</span>
   </a>
@@ -28,18 +30,19 @@
     <span class="icon icon-star-filled"></span>
     <span class="tab-label">Fotos</span>
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-jogadores tab-item" href="#">
     <span class="icon icon-person"></span>
     <span class="tab-label">Jogadores</span>
   </a>
 </nav>
+	    <div class="content"></div>
 	</script>
 	<script id="employee-list-tpl" type="text/template">
 	    <ul class="table-view">
 	        {{#each this}}
 	        <li class="table-view-cell media">
 	          <a href="#employees/{{ id }}">
-	              <img class="media-object pull-left" src="assets/pics/John_Williams50.jpg">
+	              <img class="media-object pull-left" src="assets/pics/jogador{{ id }}.jpg">
 	              <div class="media-body">
 	                  {{nome}}
 	                  <p>{{apelido}}</p>
@@ -49,11 +52,27 @@
 	        {{/each}}
 	    </ul>
 	</script>
+	<script id="ranking-list-tpl" type="text/template">
+	    <ul class="table-view">
+	        {{#each this}}
+	        <li class="table-view-cell media">
+	          <a href="#employees/{{ jogador_id }}">
+	              <img class="media-object pull-left" src="assets/pics/jogador{{ jogador_id }}.jpg">
+	              <div class="media-body">
+	                  {{apelido}}
+	              </div>
+	          </a>
+	          <span class="badge">{{ pontuacao }}</span>
+	        </li>
+	        {{/each}}
+	    </ul>
+	</script>
 	<script src="cordova.js"></script>
 	<script src="lib/jquery.js"></script>
 	<script src="lib/fastclick.js"></script>
 	<script src="lib/handlebars.js"></script>
 	<script src="js/services/json/EmployeeService.js"></script>
+	<script src="js/services/json/RankingService.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

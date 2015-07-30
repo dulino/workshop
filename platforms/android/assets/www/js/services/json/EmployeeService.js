@@ -17,5 +17,8 @@ var EmployeeService = function() {
         return $.ajax({url: url + "?name=" + searchKey});
     }
 
+    this.findAll = function() {
+        return $.ajax({url: url});
+    }
 
 }

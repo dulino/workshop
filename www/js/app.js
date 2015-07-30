@@ -4,7 +4,10 @@
     /* ---------------------------------- Local Variables ---------------------------------- */
     var homeTpl = Handlebars.compile($("#home-tpl").html());
     var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
-    var service = new EmployeeService();
+    var rankingListTpl = Handlebars.compile($("#ranking-list-tpl").html());
+    var eService = new EmployeeService();
+    eService.initialize();
+    var service = new RankingService();
     service.initialize().done(function () {
         renderHomeView();
     });
@@ -29,13 +32,26 @@
     
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName() {
-        service.findByName($('.search-key').val()).done(function (employees) {
+        eService.findByName($('.search-key').val()).done(function (employees) {
             $('.content').html(employeeListTpl(employees));
+        });
+    }
+    function findAll() {
+        eService.findAll().done(function (employees) {
+            $('.content').html(employeeListTpl(employees));
+            //$('.search-key').on('keyup', findByName);
+        });
+    }
+    function listaRanking() {
+        service.findAll().done(function (rankings) {
+            $('.content').html(rankingListTpl(rankings));
         });
     }
     function renderHomeView() {
         $('body').html(homeTpl());
-        findByName();
-        $('.search-key').on('keyup', findByName);
+        $('.tab-ranking').on('click', listaRanking);
+        $('.tab-jogadores').on('click', findAll);
+        //findAll();
+        listaRanking();
     }
 }());
