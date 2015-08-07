@@ -39,14 +39,14 @@
     function findAll() {
         eService.findAll().done(function (employees) {
             $('.content').html(employeeListTpl(employees));
-            $('.tab-ranking').removeClass('active');
+            $('.tab-item.active').removeClass('active');
             $('.tab-jogadores').addClass('active');
         });
     }
     function listaRanking() {
         service.findAll().done(function (rankings) {
             $('.content').html(rankingListTpl(rankings));
-            $('.tab-jogadores').removeClass('active');
+            $('.tab-item.active').removeClass('active');
             $('.tab-ranking').addClass('active');
         });
     }
