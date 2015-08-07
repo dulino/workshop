@@ -39,19 +39,21 @@
     function findAll() {
         eService.findAll().done(function (employees) {
             $('.content').html(employeeListTpl(employees));
-            //$('.search-key').on('keyup', findByName);
+            $('.tab-item.active').removeClass('active');
+            $('.tab-jogadores').addClass('active');
         });
     }
     function listaRanking() {
         service.findAll().done(function (rankings) {
             $('.content').html(rankingListTpl(rankings));
+            $('.tab-item.active').removeClass('active');
+            $('.tab-ranking').addClass('active');
         });
     }
     function renderHomeView() {
         $('body').html(homeTpl());
         $('.tab-ranking').on('click', listaRanking);
         $('.tab-jogadores').on('click', findAll);
-        //findAll();
         listaRanking();
     }
 }());
