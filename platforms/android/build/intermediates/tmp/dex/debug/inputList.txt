@@ -1,2 +1,2 @@
-C:\Projetos\Cordova\workshop\platforms\android\build\intermediates\classes\debug
-C:\Projetos\Cordova\workshop\platforms\android\build\intermediates\pre-dexed\debug\classes-e83386aeda5ff09cad82034b7ffa2ed39d512f4f.jar
+D:\Projetos\cordova\workshop\platforms\android\build\intermediates\classes\debug
+D:\Projetos\cordova\workshop\platforms\android\build\intermediates\pre-dexed\debug\classes-fcfa84ab4d2392af036656ca871542f74cfa5a10.jar
