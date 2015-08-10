@@ -1,2 +1,0 @@
-D:\Projetos\cordova\workshop\platforms\android\build\intermediates\classes\debug
-D:\Projetos\cordova\workshop\platforms\android\build\intermediates\pre-dexed\debug\classes-fcfa84ab4d2392af036656ca871542f74cfa5a10.jar
